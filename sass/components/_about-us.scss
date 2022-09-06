@@ -1,0 +1,45 @@
+.about-us {
+  background-color: $background-color1;
+
+  &__desc {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @extend %font-styles-desc1;
+    margin-bottom: 20px;
+  }
+
+  &__desc::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+  }
+
+  &__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 28px;
+    line-height: 1.32;
+    letter-spacing: 0.05em;
+    color: $main-color;
+    margin-bottom: 20px;
+  }
+
+  &__text1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.02em;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  &__text2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+}

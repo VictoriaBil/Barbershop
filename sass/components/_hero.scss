@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+  width: 480px;
+  background-image: url(../images/hero_image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &____box {
+    display: block;
+    padding: 112px 82px 209px 0;
+  }
+
+  &__desc {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @extend %font-styles-desc-hero;
+    margin-bottom: 20px;
+  }
+
+  &__desc::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+  }
+
+  &__title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1, 63;
+    letter-spacing: 0.02em;
+    color: $secondary-color;
+  }
+}

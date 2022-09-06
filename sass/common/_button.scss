@@ -1,0 +1,17 @@
+.button {
+  @extend %button-styles;
+  color: $main-color;
+  transition: color $transition-duration $cubic,
+    background-color $transition-duration $cubic;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $accent-color;
+  }
+
+  &--mobile {
+    width: 194px;
+    margin-bottom: 64px;
+  }
+}

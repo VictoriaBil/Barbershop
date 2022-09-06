@@ -25,14 +25,21 @@
 
 %button-styles {
   font-family: inherit;
+  display: block;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: $main-color;
+  text-align: center;
+  min-width: 160px;
+  height: 40px;
   border: 1px solid $accent-color;
   border-radius: 25px;
   padding: 12px 20px;
   background-color: transparent;
+}
+
+%list {
+  list-style: none;
 }

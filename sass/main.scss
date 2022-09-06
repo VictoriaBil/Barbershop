@@ -1,203 +1,22 @@
-@import "./variables";
-@import "./placeholders";
+@import "./utils.scss/variables";
+@import "./utils.scss/placeholders";
+@import "./utils.scss/utils";
+@import "./utils.scss/container";
 
-.list {
-  list-style: none;
-}
+@import "./common/button";
 
-.link {
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-textarea {
-  resize: none;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  margin: 0;
-  padding-left: 0;
-}
-
-button {
-  cursor: pointer;
-}
-
-address {
-  font-style: normal;
-}
-
-a {
-  text-decoration: none;
-}
-
-.section {
-  padding-top: 84px;
-  padding-bottom: 84px;
-}
-
-.container {
-  padding-left: 31px;
-  padding-right: 31px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-// Hero section
-
-.hero {
-  position: relative;
-  width: 480px;
-  background-image: url(../images/hero_image.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.hero-nav {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 40px;
-}
-
-.hero__box {
-  display: block;
-  padding: 208px 113px 209px 31px;
-}
-
-.hero__desc {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  @extend %font-styles-desc-hero;
-}
-
-.hero__desc::before {
-  content: "";
-  width: 60px;
-  height: 1px;
-  background-color: currentColor;
-}
-
-.hero__title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
-  color: $white;
-}
-
-.hero__text {
-  font-family: "Open Sans";
-  font-size: 16px;
-  line-height: 1, 63;
-  letter-spacing: 0.02em;
-  color: $secondary-color;
-}
-
-.logo {
-  display: inline-block;
-}
-
-.button-menu__open {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: none;
-}
-
-// О нас
-.about-us {
-  background-color: $background-color1;
-}
-
-.about-us__desc {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  @extend %font-styles-desc1;
-  margin-bottom: 20px;
-}
-
-.about-us__desc::before {
-  content: "";
-  width: 60px;
-  height: 1px;
-  background-color: currentColor;
-}
-
-.about-us__title {
-  font-family: "Raleway", sans-serif;
-  font-size: 28px;
-  line-height: 1.32;
-  letter-spacing: 0.05em;
-  color: $main-color;
-  margin-bottom: 20px;
-}
-
-.about-us__text1 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.63;
-  letter-spacing: 0.02em;
-  color: $text-color;
-  margin-bottom: 20px;
-}
-
-.about-us__text2 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  line-height: 1.86;
-  letter-spacing: 0.02em;
-  color: $text-color;
-  margin-bottom: 20px;
-}
-
-.button {
-  @extend %button-styles;
-}
+@import "./components/hero";
+@import "./mobile-menu/mobile-menu";
+@import "./mobile-menu/button-menu";
+@import "./components/social-list";
+@import "./components/about-us";
+@import "./social-networks";
 
 //Services and prices
 
 .price {
-  //   max-height: 738px;
   background-color: #111319;
-  background-image: url(../images/back-img-prices.jpg);
+  background-image: url(../images/bg_prices.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -244,7 +63,7 @@ body {
 }
 
 .price-list__desc {
-  display: inline-flex;
+  display: flex;
   align-items: baseline;
   font-size: 14px;
   line-height: 1.43;
@@ -252,11 +71,17 @@ body {
   color: $secondary-color;
 }
 
+.price-list__desc--styles {
+  flex-grow: 1;
+}
+
 .price-list__desc--styles::after {
   content: "";
-  width: 50px;
+  width: 1px;
   height: 1px;
   background-color: $prices-line;
+  margin-left: 4px;
+  margin-right: 4px;
   flex-grow: 1;
 }
 
@@ -367,6 +192,10 @@ body {
 
 // barbers
 
+.barbers {
+  background-color: $background-color2;
+}
+
 .barbers__desc {
   display: flex;
   align-items: center;
@@ -390,4 +219,285 @@ body {
   color: $main-color;
 
   margin-bottom: 44px;
+}
+
+.barbers-list__item {
+  margin-bottom: 64px;
+}
+
+.barbers-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.barbers-list__name {
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: $main-color;
+  margin-bottom: 8px;
+}
+
+.barbers-list__speciality {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+
+.barbers-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Gallery
+
+.gallery {
+  background-color: $background-color1;
+}
+
+.gallery__desc {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @extend %font-styles-desc1;
+  margin-bottom: 71px;
+}
+
+.gallery__desc::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.gallery-list__item {
+  margin-bottom: 30px;
+}
+
+.gallery-list__item:last-child {
+  margin-bottom: 0;
+}
+
+// Booking section
+
+.booking {
+  background-color: $background-booking;
+}
+
+.booking__title {
+  font-size: 42px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $white;
+  margin-bottom: 44px;
+}
+
+.booking__input,
+.booking__textarea {
+  width: 100%;
+  color: $white;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: $input-placeholder-color;
+  margin-bottom: 44px;
+  transition: color $transition-duration $cubic,
+    border-bottom $transition-duration $cubic;
+}
+
+.booking__textarea {
+  border-bottom: 2px solid $input-placeholder-color;
+}
+
+.booking__input:hover,
+.booking__input:focus,
+.booking__textarea:hover,
+.booking__textarea:focus {
+  color: $white;
+  border-bottom: 3px solid $input-placeholder-color;
+}
+
+.booking__input::placeholder,
+.booking__textarea::placeholder {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $input-placeholder-color;
+  transition: color $transition-duration $cubic;
+}
+
+.booking__input:hover::placeholder,
+.booking__textarea:hover::placeholder,
+.booking__input:focus::placeholder,
+.booking__textarea:focus::placeholder {
+  color: $white;
+}
+
+.button--booking {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $white;
+}
+
+// Contacts
+
+.contacts {
+  height: 496px;
+  background-color: #111319;
+  background-image: url(../images/bg_contacts2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts__title {
+  font-size: 42px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $white;
+  margin-bottom: 40px;
+}
+
+.contacts__address {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: $secondary-color;
+  margin-bottom: 20px;
+  transition: color $transition-duration $cubic;
+}
+
+.contact-list__link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: $secondary-color;
+  transition: color $transition-duration $cubic;
+}
+
+.contact-list__link:last-child {
+  margin-bottom: 0;
+}
+
+.contact-list__link--decoration {
+  text-decoration: underline;
+}
+
+.contacts__address:hover,
+.contacts__address:focus,
+.contact-list__link:hover,
+.contact-list__link:focus {
+  color: $accent-color;
+}
+
+.contacts__svg {
+  fill: currentColor;
+  transition: fill $transition-duration $cubic;
+}
+
+.contacts__svg:hover,
+.contacts__svg:focus {
+  fill: $accent-color;
+}
+
+.contacts-list__item {
+  margin-bottom: 20px;
+}
+
+.contacts-list__item:last-child {
+  margin-bottom: 44px;
+}
+
+.contacts__desc {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: $white;
+  margin-bottom: 20px;
+}
+
+.contacts__desc::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.contacts__text {
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: $secondary-color;
+}
+
+// Footer
+
+.footer {
+  background-color: $background-color2;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.footer-list {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.footer-list__link {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: $main-color;
+  transition: color $transition-duration $cubic;
+}
+
+.footer-list__link:hover,
+.footer-list__link:focus {
+  color: $accent-color;
+}
+
+.footer-list__link--decoration::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  color: $main-color;
+  background-color: currentColor;
+}
+
+.footer__copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: $secondary-color;
 }

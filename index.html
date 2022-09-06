@@ -26,12 +26,79 @@
               <use href="./images/symbol-defs.svg#icon-Logo_Barbershop"></use>
             </svg>
           </a>
-          <button class="button-menu__open" type="submit">
-            <svg width="24" height="16">
+          <button
+            class="button-menu__open js-open-menu"
+            type="submit"
+            aria-controls="menu-container"
+            aria-expanded="false"
+          >
+            <svg
+              class="button-menu__svg button-menu__svg--color"
+              width="24"
+              height="16"
+            >
               <use href="./images/symbol-defs.svg#icon-menu_24px"></use>
             </svg>
           </button>
         </nav>
+
+        <div
+          class="mobile-menu js-menu-container"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <button class="button-menu__close js-close-menu" type="submit">
+            <svg class="button-menu__svg" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+            </svg>
+          </button>
+
+          <div class="mobile-menu__navigation">
+            <ul class="mobile-menu__list list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">About</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Services and prices</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Barbers</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Contacts</a>
+              </li>
+            </ul>
+
+            <a class="mobile-menu__contacts" href="tel:+380441111111"
+              >+38 044 111 11 11</a
+            >
+            <button class="button button--mobile" type="submit">
+              Online-booking
+            </button>
+
+            <ul class="social-list list">
+              <li class="social-list__item social-list__item--mobile">
+                <a
+                  class="social-list__link social-list__link--mobile social-list__link--decoration"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social-list__item social-list__item--position">
+                <a
+                  class="social-list__link social-list__link--mobile"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div class="hero__box">
           <p class="hero__desc">A hair salon for men in Kyiv</p>
           <h1 class="hero__title">BarberShop</h1>
@@ -58,7 +125,7 @@
             the same wave" with clients. Therefore, we are always ready to
             improve everyone who comes to us!
           </p>
-          <button type="button" class="button">Online booking</button>
+          <button type="button" class="button">Online-booking</button>
         </div>
       </section>
 
@@ -118,8 +185,8 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="button button--centre">
-            Online booking
+          <button type="button" class="button button--centre button--booking">
+            Online-booking
           </button>
         </div>
       </section>
@@ -183,28 +250,86 @@
                   <li>
                     <a class="social__item" href="#" aria-label="Instagram">
                       <svg class="social__icon" width="20" height="20">
-                        <use href="./images/icons.svg#icon-instagram-2"></use>
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram-2"
+                        ></use>
                       </svg>
                     </a>
                   </li>
                   <li>
                     <a class="social__item" href="#" aria-label="Twitter">
                       <svg class="social__icon" width="20" height="16">
-                        <use href="./images/icons.svg#icon-twitter-1"></use>
+                        <use
+                          href="./images/symbol-defs.svg#icon-twitter-1"
+                        ></use>
                       </svg>
                     </a>
                   </li>
                   <li>
                     <a class="social__item" href="#" aria-label="Facebook">
                       <svg class="social__icon" width="10" height="20">
-                        <use href="./images/icons.svg#icon-facebook-1"></use>
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook-1"
+                        ></use>
                       </svg>
                     </a>
                   </li>
                   <li>
                     <a class="social__item" href="#" aria-label="LinkedIn">
                       <svg class="social__icon" width="20" height="20">
-                        <use href="./images/icons.svg#icon-linkedin-1"></use>
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin-1"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="barbers-list__item">
+              <img src="./images/barber2.jpg" alt="Второй барбер" width="418" />
+
+              <div class="barbers-box">
+                <h3 class="barbers-list__name">Michele Doe</h3>
+                <p class="barbers-list__speciality">Extreme Barber</p>
+              </div>
+
+              <div class="social-networks">
+                <ul class="social list">
+                  <li>
+                    <a class="social__item" href="#" aria-label="Instagram">
+                      <svg class="social__icon" width="20" height="20">
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram-2"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social__item" href="#" aria-label="Twitter">
+                      <svg class="social__icon" width="20" height="16">
+                        <use
+                          href="./images/symbol-defs.svg#icon-twitter-1"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social__item" href="#" aria-label="Facebook">
+                      <svg class="social__icon" width="10" height="20">
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook-1"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social__item" href="#" aria-label="LinkedIn">
+                      <svg class="social__icon" width="20" height="20">
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin-1"
+                        ></use>
                       </svg>
                     </a>
                   </li>
@@ -212,116 +337,192 @@
               </div>
             </li>
             <li class="barbers-list__item">
-              <img src="./images/barber2.jpg" alt="Второй барбер" width="418" />
-              <h3 class="barbers-list__name">Michele Doe</h3>
-              <p class="barbers-list__speciality">Extreme Barber</p>
-            </li>
-            <li class="barbers-list__item">
               <img src="./images/barber3.jpg" alt="Третий барбер" width="418" />
-              <h3 class="barbers-list__name">Alan Black</h3>
-              <p class="barbers-list__speciality">Extreme Barber</p>
+
+              <div class="barbers-box">
+                <h3 class="barbers-list__name">Alan Black</h3>
+                <p class="barbers-list__speciality">Extreme Barber</p>
+              </div>
+
+              <div class="social-networks">
+                <ul class="social list">
+                  <li>
+                    <a class="social__item" href="#" aria-label="Instagram">
+                      <svg class="social__icon" width="20" height="20">
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram-2"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social__item" href="#" aria-label="Twitter">
+                      <svg class="social__icon" width="20" height="16">
+                        <use
+                          href="./images/symbol-defs.svg#icon-twitter-1"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social__item" href="#" aria-label="Facebook">
+                      <svg class="social__icon" width="10" height="20">
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook-1"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social__item" href="#" aria-label="LinkedIn">
+                      <svg class="social__icon" width="20" height="20">
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin-1"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
       </section>
+
       <section class="gallery section">
-        <p class="gallery__desc">In Latin, "barba" means "beard"</p>
-        <h2 hidden>Gallery</h2>
-        <ul class="gallery-list list">
-          <li class="gallery-list__item">
-            <img
-              src="./images/barber4.jpg"
-              alt="Четвертый барбер"
-              width="418"
-            />
-          </li>
-          <li class="gallery-list__item">
-            <img src="./images/barber5.jpg" alt="Пятий барбер" width="418" />
-          </li>
-          <li class="gallery-list__item">
-            <img src="./images/barber6.jpg" alt="Шестой барбер" width="418" />
-          </li>
-          <li class="gallery-list__item">
-            <img src="./images/barber7.jpg" alt="Седьмой барбер" width="418" />
-          </li>
-        </ul>
-      </section>
-      <section class="booking section">
-        <h2 class="booking__title">Online-booking</h2>
-        <form action="">
-          <label for="name"></label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="NAME*"
-            required
-          />
-          <label for="tel"></label>
-          <input
-            type="tel"
-            name="phone"
-            id="tel"
-            placeholder="PHONE*"
-            required
-          />
-          <label for="message"></label>
-          <textarea name="message" id="message" cols="30" rows="10">
-           message</textarea
-          >
-          <button type="submit">send</button>
-        </form>
-      </section>
-      <section class="contacts section">
-        <address>
-          <a
-            href="https://goo.gl/maps/TTYhQANF2jALEVkt9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg width="24" height="24">
-              <use href="./images/symbol-defs.svg#icon-map-pin"></use>
-            </svg>
-            st. Vasilkovaya, 7A Kiev, 08132</a
-          >
-          <ul class="list">
-            <li>
-              <a href="mailto:barbershop@email.com">
-                <svg width="24" height="24">
-                  <use href="./images/symbol-defs.svg#icon-mail"></use>
-                </svg>
-                barbershop@email.com</a
-              >
+        <div class="container">
+          <p class="gallery__desc">In Latin, "barba" means "beard"</p>
+          <h2 hidden>Gallery</h2>
+          <ul class="gallery-list list">
+            <li class="gallery-list__item">
+              <img
+                src="./images/barber4.jpg"
+                alt="Четвертый барбер"
+                width="418"
+              />
             </li>
-            <li>
-              <a href="tel:+380441111111">
-                <svg width="24" height="24">
-                  <use href="./images/symbol-defs.svg#icon-Shape"></use>
-                </svg>
-                +38 044 111 11 11</a
-              >
+            <li class="gallery-list__item">
+              <img src="./images/barber5.jpg" alt="Пятий барбер" width="418" />
+            </li>
+            <li class="gallery-list__item">
+              <img src="./images/barber6.jpg" alt="Шестой барбер" width="418" />
+            </li>
+            <li class="gallery-list__item">
+              <img
+                src="./images/barber7.jpg"
+                alt="Седьмой барбер"
+                width="418"
+              />
             </li>
           </ul>
-        </address>
-        <p>Working hours</p>
-        <p>Every day from 9:00 to 22:00</p>
+        </div>
+      </section>
+
+      <section class="booking section">
+        <div class="container">
+          <h2 class="booking__title">Online-booking</h2>
+          <form action="">
+            <label class="booking__lable" for="name"></label>
+            <input
+              class="booking__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="name*"
+              required
+            />
+            <label class="booking__lable" for="tel"></label>
+            <input
+              class="booking__input"
+              type="tel"
+              name="phone"
+              id="tel"
+              placeholder="phone*"
+              required
+            />
+            <label class="booking__lable" for="message"></label>
+            <textarea
+              class="booking__textarea"
+              name="comment"
+              id="message"
+              rows="10"
+              placeholder="message"
+            ></textarea>
+
+            <button type="submit" class="button button--centre button--booking">
+              send
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="contacts section">
+        <div class="container">
+          <h2 class="contacts__title">Contacts</h2>
+          <address class="address-box">
+            <a
+              class="contacts__address"
+              href="https://goo.gl/maps/TTYhQANF2jALEVkt9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="contacts__svg" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-map-pin"></use>
+              </svg>
+              st. Vasilkovaya, 7A Kiev, 08132</a
+            >
+            <ul class="contacts-list list">
+              <li class="contacts-list__item">
+                <a
+                  class="contact-list__link contact-list__link--decoration"
+                  href="mailto:barbershop@email.com"
+                >
+                  <svg class="contacts__svg" width="24" height="24">
+                    <use href="./images/symbol-defs.svg#icon-mail"></use>
+                  </svg>
+                  barbershop@email.com</a
+                >
+              </li>
+              <li class="contacts-list__item">
+                <a class="contact-list__link" href="tel:+380441111111">
+                  <svg class="contacts__svg" width="24" height="24">
+                    <use href="./images/symbol-defs.svg#icon-phone"></use>
+                  </svg>
+                  +38 044 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="contacts__schedule"></div>
+          <p class="contacts__desc">Working hours</p>
+          <p class="contacts__text">Every day from 9:00 to 22:00</p>
+        </div>
       </section>
     </main>
 
-    <footer>
-      &#169;copyright2020
-      <ul class="list">
-        <li>
-          <a href="" target="_blank" rel="noopener noreferrer nofollow"
+    <footer class="footer container">
+      <ul class="social-list social-list--footer list">
+        <li class="social-list__item">
+          <a
+            class="social-list__link social-list__link--footer social-list__link--decoration"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer nofollow"
             >Instagram</a
           >
         </li>
-        <li>
-          <a href="" target="_blank" rel="noopener noreferrer nofollow"
+        <li class="social-list__item">
+          <a
+            class="social-list__link social-list__link--footer"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer nofollow"
             >Youtube</a
           >
         </li>
       </ul>
+      <p class="footer__copyright">&#169;copyright2020</p>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

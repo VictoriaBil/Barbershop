@@ -1,0 +1,58 @@
+.mobile-menu {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 337px;
+  height: 796px;
+  background-color: $white;
+
+  &.is-open {
+    display: block;
+  }
+
+  &__navigation {
+    display: block;
+    margin-top: 118px;
+    margin-left: 40px;
+  }
+
+  &__list {
+    margin-bottom: 64px;
+  }
+
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.1em;
+    color: $main-color;
+    transition: color $transition-duration $cubic;
+  }
+
+  &__contacts {
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.1em;
+    color: $main-color;
+    margin-bottom: 24px;
+    transition: color $transition-duration $cubic;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__contacts:hover,
+  &__contacts:focus {
+    color: $accent-color;
+  }
+}

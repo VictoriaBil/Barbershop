@@ -1,0 +1,9 @@
+.gallery-list {
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+}

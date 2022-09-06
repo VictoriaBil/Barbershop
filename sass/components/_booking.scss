@@ -1,0 +1,56 @@
+.booking {
+  background-color: $background-booking;
+
+  &__title {
+    font-size: 42px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: $white;
+    margin-bottom: 44px;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    color: $white;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: $input-placeholder-color;
+    margin-bottom: 44px;
+    transition: color $transition-duration $cubic,
+      border-bottom $transition-duration $cubic;
+  }
+
+  &__textarea {
+    border-bottom: 2px solid $input-placeholder-color;
+  }
+
+  &__input:hover,
+  &__input:focus,
+  &__textarea:hover,
+  &__textarea:focus {
+    color: $white;
+    border-bottom: 3px solid $input-placeholder-color;
+  }
+
+  &::placeholder,
+  &::placeholder {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $input-placeholder-color;
+    transition: color $transition-duration $cubic;
+  }
+
+  &__input:hover::placeholder,
+  &__textarea:hover::placeholder,
+  &__input:focus::placeholder,
+  &__textarea:focus::placeholder {
+    color: $white;
+  }
+}

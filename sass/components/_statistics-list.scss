@@ -1,0 +1,48 @@
+.statistics-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+
+  &__item {
+    width: 193px;
+    height: 133px;
+    padding: 20px 36px;
+    background-color: $bg-color-box;
+  }
+
+  &__item--position {
+    margin-top: 30px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__number {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    letter-spacing: 0.05em;
+    color: $main-color;
+  }
+
+  &__plus {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.38;
+    text-align: center;
+    color: $accent-color;
+    margin-top: 15px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: center;
+    color: $main-color;
+  }
+}

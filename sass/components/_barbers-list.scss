@@ -1,0 +1,24 @@
+.barbers-list__item {
+  margin-bottom: 64px;
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $main-color;
+    margin-bottom: 8px;
+  }
+
+  &__speciality {
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+}

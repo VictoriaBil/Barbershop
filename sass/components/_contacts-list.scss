@@ -1,0 +1,33 @@
+.contact-list {
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: $secondary-color;
+    transition: color $transition-duration $cubic;
+  }
+
+  &__link:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link--decoration {
+    text-decoration: underline;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 44px;
+  }
+}

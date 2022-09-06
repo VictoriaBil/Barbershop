@@ -1,0 +1,18 @@
+.gallery {
+  background-color: $background-color1;
+
+  &__desc {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @extend %font-styles-desc1;
+    margin-bottom: 71px;
+  }
+
+  &__desc::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+  }
+}

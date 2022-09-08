@@ -130,20 +130,28 @@ body {
 @media screen and (max-width: 767px) {
   .hero {
     position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
-    width: 606px;
+    min-width: 606px;
     height: 680px;
-    margin-right: 0;
-    margin-left: 0;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 @media screen and (max-width: 767px) {
   .hero__box {
     display: block;
     padding: 112px 82px 209px 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero__box {
+    display: block;
+    padding: 156px 91px 237px 103px;
   }
 }
 .hero__desc {
@@ -191,6 +199,9 @@ body {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+}
+.button--header {
+  margin-bottom: 20px;
 }
 .button--booking {
   display: block;
@@ -385,6 +396,39 @@ body {
   height: 1px;
   color: #303030;
   background-color: currentColor;
+}
+
+.main-nav {
+  display: flex;
+  margin-top: 40px;
+  align-items: baseline;
+}
+
+.nav-block {
+  margin-left: auto;
+  text-align: center;
+}
+
+.main-nav__list {
+  display: flex;
+  gap: 21px;
+}
+
+.main-nav__link,
+.main-nav__tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: white;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus,
+.main-nav__tel:hover,
+.main-nav__tel:focus {
+  color: #ff6c00;
 }
 
 .about-us {

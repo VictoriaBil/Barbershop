@@ -1,0 +1,32 @@
+.main-nav {
+  display: flex;
+  margin-top: 40px;
+  align-items: baseline;
+}
+
+.nav-block {
+  margin-left: auto;
+  text-align: center;
+}
+
+.main-nav__list {
+  display: flex;
+  gap: 21px;
+}
+
+.main-nav__link,
+.main-nav__tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: $white;
+  transition: color $transition-duration $cubic;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus,
+.main-nav__tel:hover,
+.main-nav__tel:focus {
+  color: $accent-color;
+}

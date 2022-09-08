@@ -1,11 +1,12 @@
-@import "./utils.scss/variables";
-@import "./utils.scss/placeholders";
-@import "./utils.scss/utils";
-@import "./utils.scss/container";
-
-@import "./common/button";
-
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/utils";
+@import "./utils/container";
+@import "./utils/breakpoints";
 @import "./components/hero";
+@import "./common/button";
+@import "./boxes/boxes";
+
 @import "./mobile-menu/mobile-menu";
 @import "./mobile-menu/button-menu";
 @import "./components/social-list";
@@ -16,58 +17,31 @@
 @import "./components/statistics-list";
 @import "./components/barbers";
 @import "./components/barbers-list";
+@import "./components/social-networks";
 @import "./components/gallery";
 @import "./components/gallery-list";
 @import "./components/booking";
 @import "./components/contacts";
 @import "./components/contacts-list";
+@import "./components/footer";
+@import "./components/footer-list";
 
-@import "./social-networks";
-
-// Footer
-
-.footer {
-  background-color: $background-color2;
-  padding-top: 44px;
-  padding-bottom: 44px;
-}
-
-.footer-list {
+.header {
   display: flex;
-  gap: 40px;
-  justify-content: flex-end;
-  margin-bottom: 20px;
 }
 
-.footer-list__link {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-  color: $main-color;
-  transition: color $transition-duration $cubic;
-}
+.hero__right-blok {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-.footer-list__link:hover,
-.footer-list__link:focus {
-  color: $accent-color;
-}
-
-.footer-list__link--decoration::before {
-  content: "";
-  width: 60px;
-  height: 1px;
-  color: $main-color;
-  background-color: currentColor;
-}
-
-.footer__copyright {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-  color: $secondary-color;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    position: relative;
+    display: flex;
+    width: 93px;
+    height: 680px;
+    background-color: $white;
+    margin-left: 39px;
+    margin-right: 30px;
+  }
 }

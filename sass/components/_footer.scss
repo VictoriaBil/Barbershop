@@ -1,0 +1,13 @@
+.footer {
+  background-color: $background-color2;
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+  &__copyright {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: $secondary-color;
+  }
+}

@@ -1,0 +1,31 @@
+.footer-list {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: $main-color;
+    transition: color $transition-duration $cubic;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
+  &__link--decoration::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    color: $main-color;
+    background-color: currentColor;
+  }
+}

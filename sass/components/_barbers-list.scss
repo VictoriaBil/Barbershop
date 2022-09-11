@@ -1,5 +1,16 @@
-.barbers-list__item {
-  margin-bottom: 64px;
+.barbers-list {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    display: block;
+    width: 450px;
+  }
+
+  &__item {
+    margin-bottom: 64px;
+
+    @media screen and (min-width: 767px) and (max-width: 1199px) {
+      width: 450px;
+    }
+  }
 
   &__item:last-child {
     margin-bottom: 0;

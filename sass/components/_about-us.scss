@@ -40,6 +40,34 @@
     line-height: 1.86;
     letter-spacing: 0.02em;
     color: $text-color;
-    margin-bottom: 20px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 77px;
+    }
   }
+}
+
+.about-us__description {
+  display: block;
+}
+
+.about-us__gallery {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  display: block;
+  min-width: 330px;
+}
+
+.about-us__img {
+  margin-bottom: 30px;
+}
+
+.about-us__img:last-child {
+  margin-bottom: 0;
 }

@@ -8,10 +8,15 @@
     letter-spacing: 0.05em;
     color: $white;
     margin-bottom: 44px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      text-align: start;
+    }
   }
 
   &__input,
   &__textarea {
+    display: block;
     width: 100%;
     color: $white;
     background-color: transparent;
@@ -25,6 +30,7 @@
   }
 
   &__textarea {
+    height: 76px;
     border-bottom: 2px solid $input-placeholder-color;
   }
 
@@ -52,5 +58,9 @@
   &__input:focus::placeholder,
   &__textarea:focus::placeholder {
     color: $white;
+  }
+
+  &__lable {
+    width: 100%;
   }
 }

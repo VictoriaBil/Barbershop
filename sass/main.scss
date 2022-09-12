@@ -29,6 +29,7 @@
 
 .header {
   display: flex;
+  justify-content: center;
 }
 
 .hero__right-blok {
@@ -42,7 +43,6 @@
     width: 93px;
     height: 680px;
     background-color: $white;
-    // margin-left: 39px;
     margin-right: 30px;
   }
 }
@@ -59,8 +59,4 @@
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-}
-
-.header {
-  justify-content: center;
 }
